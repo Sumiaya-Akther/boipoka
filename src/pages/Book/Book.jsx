@@ -1,12 +1,14 @@
 import React from 'react';
 import { IoMdStarHalf } from "react-icons/io";
+import { Link } from 'react-router';
 
 const Book = ({ singleBook }) => {
    // console.log(singleBook);
    
-   const {bookName, author, image, totalPages, rating, category, tags, publisher, } = singleBook;
+   const {bookName, author, image, totalPages,bookId,  rating, category, tags, publisher, } = singleBook;
 
     return (
+        <Link to={`/bookDetails/${bookId}`}>
         <div className="card bg-base-100 p-5 shadow-sm border-1 border-gray-200">
             <figure className='bg-[#f3f3f3] w-3/4 md:w-4/4 mx-auto rounded-2xl  p-8'>
                 <img className='w-auto h-52 '
@@ -35,6 +37,7 @@ const Book = ({ singleBook }) => {
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 

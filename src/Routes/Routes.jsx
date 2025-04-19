@@ -5,6 +5,9 @@ import {
 import Root from '../pages/Root/Root';
 import Errorpage from '../pages/ErrorPage/Errorpage';
 import Home from '../pages/Home/Home';
+import ListedBooks from '../pages/ListedBooks/ListedBooks';
+import PageRead from '../pages/PageRead/PageRead';
+import BookDetails from '../pages/BookDetails/BookDetails';
 
 export const router = createBrowserRouter([
     {
@@ -19,6 +22,18 @@ export const router = createBrowserRouter([
             Component: Home,
             hydrateFallbackElement: <p>loading.....</p>
             
+        },
+        {
+           path: "/bookDetails/:id",
+           Component: BookDetails
+        },
+        {
+          path: "/listedBooks",
+          Component: ListedBooks
+        },
+        {
+          path: "/pageRead",
+          Component: PageRead
         }
       ]
     },
